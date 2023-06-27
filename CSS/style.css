@@ -403,7 +403,7 @@
 .meal-icon {
   height: 2.4rem;
   width: 2.4rem;
-  color: #e67e22;
+  color: var(--main-bg-color);
 }
 
 .list {
@@ -424,7 +424,7 @@
 .list-icon {
   width: 3rem;
   height: 3rem;
-  color: #e67e22;
+  color: var(--main-bg-color);
 }
 
 .all-recipes {
@@ -434,7 +434,7 @@
 
 .link:link,
 .link:visited {
-  color: #e67e22;
+  color: var(--second-bg-color);
   font-size: 2rem;
   text-decoration: none;
   border-bottom: 1px solid currentColor;
@@ -456,7 +456,7 @@
   /* gap: 9.6rem;  */
 
   /* padding: 9.6rem 2.4rem 9.6rem 1.8rem; */
-  background-color: #fdf2e9;
+  background-color: var(--transparente-light-bg-color);
   /* padding-left: 9.6rem; */
   align-items: center;
 }
@@ -539,13 +539,13 @@
 .pricing-plan--started {
   justify-self: end;
   background-color: #fff;
-  border: 3px solid #fdf2e9;
+  border: 3px solid var(--transparente-light-bg-color);
   padding: 4.6rem;
 }
 
 .pricing-plan--complete {
   justify-self: start;
-  background-color: #fdf2e9;
+  background-color: var(--transparente-light-bg-color);
   padding: 4.8rem;
   position: relative;
 
@@ -562,8 +562,8 @@
   font-size: 1.4rem;
   font-weight: 700;
 
-  background-color: #ffd43b;
-  color: 333;
+  background-color: var(--second-bg-color);
+  color: #fff;
   padding: 0.8rem 8rem;
   transform: rotate(45deg);
 }
@@ -576,7 +576,7 @@
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 0.75px;
-  color: #cf711f;
+  color: var(--second-bg-color);
   text-transform: uppercase;
   margin-bottom: 3.2rem;
 }
@@ -612,12 +612,12 @@
 }
 
 .feature-icon {
-  color: #e67e22;
+  color: var(--second-bg-color);
   height: 4rem;
   width: 4rem;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
-  background-color: #fdf2e9;
+  background-color: var(--transparente-light-bg-color);
   border-radius: 50%;
 }
 
@@ -657,15 +657,19 @@
   /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
   border-radius: 11px;
-  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--main-bg-color),
+    var(--light-bg-color)
+  );
   overflow: hidden;
 }
 
 .cta-img-box {
   background-image: linear-gradient(
       to right bottom,
-      rgba(236, 145, 65, 0.35),
-      rgba(230, 125, 34, 0.35)
+      rgba(65, 236, 159, 0.35),
+      rgba(34, 230, 178, 0.35)
     ),
     url("../content/img/eating.jpg");
   background-size: cover;
