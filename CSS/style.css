@@ -1,14 +1,16 @@
 .btn.btn--form {
-  color: #fdf2e9;
-  background-color: #45260a;
+  color: #cae5e2;
+  background-color: #09463f;
   align-self: end;
   margin-top: 2.6rem;
   padding: 1.2rem;
 }
 
+/* #22e6cf */
+
 .btn--form:hover {
-  color: #45260a;
-  background-color: #fdf2e9;
+  color: #09463f;
+  background-color: #cae5e2;
 }
 
 .margin-right-sm {
@@ -22,7 +24,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #fdf2e9;
+  background-color: #cae5e2;
 
   /* because we want headewr to be sticky later */
   height: 9.6rem;
@@ -60,7 +62,7 @@
 
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
-  background-color: #e67e22;
+  background-color: var(--contrast-color2);
   color: #fff;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
@@ -68,7 +70,7 @@
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-  background-color: #8a4c14;
+  background-color: var(--contrast-color1);
   color: #fff;
 }
 /* MOBILE NAV*/
@@ -118,20 +120,32 @@
 /* ************************ */
 
 .section-hero {
-  background-color: #fdf2e9;
-  padding: 4.8rem 0 9.6rem 0;
+  background-repeat: no-repeat;
+  background: fixed;
+  background-size: cover;
+  background-position: right;
+  /* padding: 4.8rem 0 9.6rem 0; */
 }
 .hero {
-  max-width: 120rem; /*1300px* y usamjos max-width para que la 
-  imagen se pueda encoger o agrandar en conjunto con el viewport*/
   margin: 0 auto;
-  padding: 0 3.2rem;
+  height: 80rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 9.6rem;
   align-items: center;
+
+  background: radial-gradient(
+    var(--transparente-light-bg-color),
+    var(--transparent-bg-color),
+    var(--transparent-bg-color)
+  );
 }
 
+.hero-text-box {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
 .hero-img {
   width: 100%;
 }
@@ -140,6 +154,8 @@
   font-size: 2rem;
   line-height: 1.5;
   margin-bottom: 4.8rem;
+  color: #111;
+  font-weight: 700;
 }
 
 .delivered-meals {
@@ -166,7 +182,7 @@
 }
 
 .delivered-text span {
-  color: #cf711f;
+  color: var(--contrast-color2);
   font-weight: 700;
 }
 
@@ -217,7 +233,7 @@
   font-size: 8.6rem;
   font-weight: 600;
   line-height: 1.2;
-  color: #ddd;
+  color: var(--light-bg-color);
   margin-bottom: 1.2rem;
 }
 
@@ -244,7 +260,7 @@
 .step-img-box::before {
   content: " ";
 
-  background-color: #fdf2e9;
+  background-color: var(--transparente-light-bg-color);
   border-radius: 50%;
   width: 60%;
   padding-bottom: 60%; /* es el 60% del width, nos permirira crear un cuadrado*/
@@ -262,7 +278,7 @@
 .step-img-box::after {
   content: " "; /* contente tiene que tener " "  , puede terner o no algo escrito adentro*/
 
-  background-color: #f8d8bd;
+  background-color: var(--light-bg-color);
   border-radius: 50%;
   width: 45%;
   padding-bottom: 45%; /* es el 60% del width, nos permirira crear un cuadrado*/
@@ -291,7 +307,7 @@
   text-transform: uppercase;
   margin-bottom: 2.4rem;
   text-align: center;
-  color: #777;
+  color: var(--grey-purple-contrast);
 }
 
 .logos {
