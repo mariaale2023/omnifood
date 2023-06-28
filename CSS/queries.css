@@ -88,6 +88,7 @@ Instead, 1rem= 1em = 16px */
   .hero-text-box,
   .hero-img-box {
     text-align: center;
+    padding: 0;
   }
 
   .delivered-meals {
