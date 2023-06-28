@@ -111,10 +111,6 @@ Instead, 1rem= 1em = 16px */
     grid-template-columns: 1fr 1fr;
   }
 
-  .list {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .section-testimonials {
     grid-template-columns: 1fr;
   }
