@@ -106,6 +106,9 @@ Instead, 1rem= 1em = 16px */
   .meal-text-box {
     padding: 2.4rem 3.2rem 3.2rem 3.2rem;
   }
+  .list-item {
+    font-size: 1.5rem;
+  }
 
   .grid--4--col {
     grid-template-columns: 1fr 1fr;
@@ -189,6 +192,7 @@ Instead, 1rem= 1em = 16px */
     flex-direction: column;
     gap: 4.8rem;
   }
+
   .gallery {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -245,6 +249,11 @@ Instead, 1rem= 1em = 16px */
   .list {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .pricing-plan--complete::after {
+    top: 6%;
+    right: -20%;
+  }
 }
 
 /* ***************************************** */
@@ -253,6 +262,10 @@ Instead, 1rem= 1em = 16px */
 /*********************************************/
 
 @media (max-width: 34em) {
+  .heading-primary {
+    font-size: 4rem;
+    margin-bottom: 0;
+  }
   .grid {
     row-gap: 4.8rem;
   }
@@ -269,6 +282,9 @@ Instead, 1rem= 1em = 16px */
     padding: 2.4rem 1.6rem;
   }
 
+  .grid.grid-btn {
+    max-width: 25rem;
+  }
   /* .section-hero {
     padding: 2.4rem 0 6.4rem 0;
   } */
@@ -322,6 +338,11 @@ Instead, 1rem= 1em = 16px */
 
   .cta-text-box {
     padding: 3.2rem;
+  }
+
+  .pricing-plan--complete::after {
+    top: 5%;
+    right: -15%;
   }
 }
 
