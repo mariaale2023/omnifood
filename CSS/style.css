@@ -298,9 +298,12 @@
     <!-- ************************** --> */
 
 .section-featured {
-  margin-top: 5rem;
+  margin: 5rem 0;
   padding: 9.6rem;
-  background-color: var(--transparente-light-bg-color);
+  background: radial-gradient(
+    var(--transparente-light-bg-color),
+    var(--transparent-bg-color)
+  );
 }
 .heading-featured-in {
   font-size: 1.4rem;
