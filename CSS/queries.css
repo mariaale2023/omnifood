@@ -4,15 +4,8 @@ Instead, 1rem= 1em = 16px */
 /* we define a first range between 1300px-1350px =>
 => 1350px/16px= 84,376em (84em)  */
 @media (max-width: 84em) {
-  .hero {
-    max-width: 120rem;
-  }
   .heading-primary {
     font-size: 4.4rem;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -59,6 +52,9 @@ Instead, 1rem= 1em = 16px */
 
   .testimonial-container {
     margin: 9.6rem 3.2rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -111,11 +107,16 @@ Instead, 1rem= 1em = 16px */
     padding: 2.4rem 3.2rem 3.2rem 3.2rem;
   }
 
+  .grid--4--col {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .section-testimonials {
     grid-template-columns: 1fr;
-  }
-  .gallery {
-    grid-template-columns: repeat(6, 1fr);
   }
 
   .testimonial-container {
@@ -192,6 +193,9 @@ Instead, 1rem= 1em = 16px */
     flex-direction: column;
     gap: 4.8rem;
   }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* ***************************************** */
@@ -211,7 +215,6 @@ Instead, 1rem= 1em = 16px */
 
   /* font-size: 43.75%; */
 
-  .grid--4--col,
   .grid--3--col {
     grid-template-columns: 1fr 1fr;
   }
@@ -243,6 +246,9 @@ Instead, 1rem= 1em = 16px */
   .adress-col {
     grid-column: span 3;
   }
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /* ***************************************** */
@@ -267,9 +273,9 @@ Instead, 1rem= 1em = 16px */
     padding: 2.4rem 1.6rem;
   }
 
-  .section-hero {
+  /* .section-hero {
     padding: 2.4rem 0 6.4rem 0;
-  }
+  } */
 
   .hero {
     padding: 0 3.2rem;
@@ -299,8 +305,11 @@ Instead, 1rem= 1em = 16px */
   }
 
   .gallery {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .section-cta {

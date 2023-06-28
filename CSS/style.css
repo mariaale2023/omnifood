@@ -124,14 +124,13 @@
   background: fixed;
   background-size: cover;
   background-position: right;
-  /* padding: 4.8rem 0 9.6rem 0; */
 }
 .hero {
   margin: 0 auto;
   height: 80rem;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 9.6rem;
+  /* gap: 9.6rem; */
   align-items: center;
 
   background: radial-gradient(
@@ -263,6 +262,7 @@
   background-color: var(--transparente-light-bg-color);
   border-radius: 50%;
   width: 60%;
+
   padding-bottom: 60%; /* es el 60% del width, nos permirira crear un cuadrado*/
   /* height: 60%; */
 
@@ -325,12 +325,13 @@
     <!-- START MEALS SECTION -->
     <!-- ************************** --> */
 
-.section-meals {
+.section-meal {
   padding: 9.6rem 0;
 }
 
 .meal {
-  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  /* box-shadow: 1rem 2.4rem 4.8rem rgba(1, 1, 1, 0.075); */
+  box-shadow: 0 2.4rem 4.8rem #a4a6a5;
   border-radius: 11px;
 
   overflow: hidden;
@@ -340,9 +341,12 @@
 
 .meal:hover {
   transform: translateY(-1.2rem);
-  box-shadow: 0 3.2rem 6.48rem rgba(0, 0, 0, 0.075); /*para hacer que la sombre se alarge cuando se mueva la card*/
+  box-shadow: 0 3.2rem 6.48rem #a4a6a5; /*para hacer que la sombre se alarge cuando se mueva la card*/
 }
 
+.grid.grid-meals {
+  margin: 0 3rem 6rem 3rem;
+}
 .meal-text-box {
   padding: 3.2rem 3.2rem 4.8rem 4.8rem;
 }
@@ -375,10 +379,37 @@
 .tag--vegan {
   background-color: #a9e34b;
 }
+
+.tag--pescatarian {
+  background-color: blue;
+  color: #fff;
+}
+
+.tag--gluten-free {
+  background-color: purple;
+  color: #fff;
+}
+
+.tag--lactose-free {
+  background-color: brown;
+  color: #fff;
+}
+
+.tag--keto {
+  background-color: rgb(47, 165, 159);
+}
+
+.tag--fodmap {
+  background-color: rgb(188, 18, 129);
+  color: #fff;
+}
+
+.tag--kids {
+  background-color: rgb(247, 239, 33);
+}
 .meal-img {
   width: 100%;
 }
-
 .meal-titlle {
   font-size: 2rem;
   font-weight: 600;
@@ -406,18 +437,23 @@
   color: var(--main-bg-color);
 }
 
+.diets {
+  margin: 0 5rem;
+  padding: 0 3rem;
+  text-align: center;
+}
 .list {
   list-style: none;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  justify-items: center;
   gap: 1.6rem;
+  padding-bottom: 2rem;
 }
 
 .list-item {
   font-size: 1.8rem;
-  display: flex;
-  align-items: center; /*uso flex contaioner en el item para centrarlo respectp al icon*/
-  gap: 1.6rem;
   line-height: 1.2;
 }
 
@@ -451,13 +487,9 @@
     <!-- ************************** --> */
 
 .section-testimonials {
+  margin: 0 5rem;
   display: grid;
-  grid-template-columns: 55fr 45fr;
-  /* gap: 9.6rem;  */
-
-  /* padding: 9.6rem 2.4rem 9.6rem 1.8rem; */
-  background-color: var(--transparente-light-bg-color);
-  /* padding-left: 9.6rem; */
+  grid-template-columns: 1fr;
   align-items: center;
 }
 
@@ -505,8 +537,7 @@
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.6rem;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 1.6rem;
 }
 
@@ -528,6 +559,9 @@
 
 .section-pricing {
   padding: 9.6rem 0;
+  background-image: url("/content/img/wallpaper/dose-juice-sTPy-oeA3h0-unsplash.jpg");
+  background-size: cover;
+  position: relative;
 }
 
 .pricing-plan {
@@ -539,7 +573,7 @@
 .pricing-plan--started {
   justify-self: end;
   background-color: #fff;
-  border: 3px solid var(--transparente-light-bg-color);
+  border: 3px solid transparent;
   padding: 4.6rem;
 }
 
@@ -607,14 +641,64 @@
   text-align: center;
   margin-top: 4.8rem;
 }
+.price-add-info {
+  position: absolute;
+  bottom: -1%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.5px;
+  color: #6f6f6f;
+  text-align: center;
+  background-color: var(--transparent-bg-color);
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+.list.check {
+  flex-direction: column;
+}
+.section-feature-box {
+  margin: 9.6rem auto;
+  padding-top: 2rem;
+  /* background-color: var(--transparent-bg-color); */
+}
+
+.heading-secondary.center {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.heading-feature-text {
+  text-align: center;
+  /* margin: 1rem auto 5rem auto; */
+  padding: 0rem 5rem 15rem 5rem;
+  font-size: 3rem;
+  line-height: 1.8;
+  letter-spacing: -0.5px;
+  color: #333;
+}
+.grid.grid-feature-color {
+  padding: 0 2rem;
+  row-gap: 12rem;
+}
 
 .feature {
+  background-color: #09463f;
+  border-radius: 10px;
+  padding: 5rem 3rem;
+  position: relative;
 }
 
 .feature-icon {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: var(--second-bg-color);
-  height: 4rem;
-  width: 4rem;
+  height: 10rem;
+  width: 10rem;
   margin-bottom: 3.2rem;
   padding: 1.6rem;
   background-color: var(--transparente-light-bg-color);
@@ -625,38 +709,27 @@
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.8rem;
-  color: #333;
+  color: var(--light-bg-color);
 }
 
 .feature-text {
   font-size: 1.8rem;
   font-weight: ;
   line-height: 1.8;
-}
-
-.price-add-info {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: -0.5px;
-  color: #6f6f6f;
-  text-align: center;
+  color: #fff;
 }
 
 /* ***************************************** */
-/*              START PRICING SECTION        */
+/*              end PRICING SECTION        */
 /*********************************************/
 
-.section-cta {
-  padding: 9.6rem 0;
-}
+/* ------------ */
 
 .cta {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1fr;
   /* background-color: #e67e22; */
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.015);
-  border-radius: 11px;
   background-image: linear-gradient(
     to right bottom,
     var(--main-bg-color),
@@ -666,12 +739,7 @@
 }
 
 .cta-img-box {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(65, 236, 159, 0.35),
-      rgba(34, 230, 178, 0.35)
-    ),
-    url("../content/img/eating.jpg");
+  background-image: url("/content/img/wallpaper/caju-gomes-QDq3YliZg48-unsplash.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -687,7 +755,7 @@
 }
 .cta-text {
   font-size: 1.8rem;
-  font-weight: ;
+
   line-height: 1.8;
   margin-bottom: 4.8rem;
 }
